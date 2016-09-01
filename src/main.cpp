@@ -1388,8 +1388,8 @@ unsigned int static DarkGravityWave3(const CBlockIndex* pindexLast, const CBlock
     bnNew /= nTargetTimespan;
 
     // If calculated difficulty is lower than the minimal diff, set the new difficulty to be the minimal diff.
-    if (bnNew > nProofOfWorkLimit){
-        bnNew = nProofOfWorkLimit;
+    if (bnNew > Params().ProofOfWorkLimit()){
+        bnNew = Params().ProofOfWorkLimit();
     }
     
     // Some logging.
