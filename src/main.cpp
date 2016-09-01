@@ -1472,22 +1472,13 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
 	{
 	    return GetNextWorkRequired_v1(pindexLast, pblock);
 	}
-	else 
-	{
 	    return DarkGravityWave3(pindexLast, pblock);
-	}
     }
-    else
-    {
-	if (pindexLast->nHeight < 800) 
+    if (pindexLast->nHeight < 800) 
 	{
-	    return GetNextWorkRequired_v1(pindexLast, pblock);
+        return GetNextWorkRequired_v1(pindexLast, pblock);
 	}
-	else 
-	{
-	    return DarkGravityWave3(pindexLast, pblock);
-	}
-    }
+    return DarkGravityWave3(pindexLast, pblock);
 }
 
 
