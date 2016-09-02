@@ -1474,7 +1474,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
 	}
 	    return DarkGravityWave3(pindexLast, pblock);
     }
-    if (pindexLast->nHeight < 800) 
+    if (pindexLast->nHeight < 1000) 
 	{
         return GetNextWorkRequired_v1(pindexLast, pblock);
 	}
