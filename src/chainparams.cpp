@@ -99,6 +99,13 @@ public:
         assert(hashGenesisBlock == uint256("0x00000000053db42cc4eb4f24cf78f26ac099557065043ba9651680c32eb349be"));
         assert(genesis.hashMerkleRoot == uint256("0xebe96bacc9ff8067eb0c325f93556272343664a4fa6f0efa11816ac802f4afff"));
 
+	vSeeds.push_back(CDNSSeedData("revcoin.org", "pool.revcoin.org"));
+	vSeeds.push_back(CDNSSeedData("revcoin.org", "node02.revcoin.org"));
+	vSeeds.push_back(CDNSSeedData("revcoin.org", "node03.revcoin.org"));
+	vSeeds.push_back(CDNSSeedData("revcoin.org", "5.39.218.156"));
+	vSeeds.push_back(CDNSSeedData("revcoin.org", "89.248.161.18"));
+	vSeeds.push_back(CDNSSeedData("revcoin.org", "89.248.170.169"));
+
 
         base58Prefixes[PUBKEY_ADDRESS] = list_of(60);
         base58Prefixes[SCRIPT_ADDRESS] = list_of(5);
