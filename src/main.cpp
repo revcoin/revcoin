@@ -1468,8 +1468,13 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
 {
     if (TestNet())
     {
-	if (pindexLast->nHeight < 8)
+	if (pindexLast->nHeight < 30)
 	{
+		if (pindexLast->nHeight > 5)
+		{
+			printf("Gathering data for DGW startup...\n");
+			DarkGravityWave3(pindexLast, pblock);
+		}
 	    return GetNextWorkRequired_v1(pindexLast, pblock);
 	}
 	    return DarkGravityWave3(pindexLast, pblock);
