@@ -1481,6 +1481,11 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     }
     if (pindexLast->nHeight < 1000) 
 	{
+		if (pindexLast->nHeight < 975)
+		{
+			printf("Gathering data for DGW...");
+			DarkGravityWave3(pindexLast, pblock);
+		}
         return GetNextWorkRequired_v1(pindexLast, pblock);
 	}
     return DarkGravityWave3(pindexLast, pblock);
